@@ -14,18 +14,18 @@ baseRouter.get('/greeting', (req, res) => {
 });
 
 baseRouter.post('/add', (req, res) => {
-    {first,second} = req.body;
+    const {first,second} = req.body;
 
-    result = first+second;
-    res.json({ "result": result });
+    const result = first+second;
+    res.status(200).json({result});
 });
 
 
 baseRouter.post('/subtract', (req, res) => {
-    {first,second} = req.body
+    const {first,second} = req.body
 
-    result = first-second;
-    res.json({ "result": result });
+    const result = first-second;
+    res.status(200).json({result});
 });
 
 app.use(baseUrl, baseRouter);
