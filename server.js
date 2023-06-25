@@ -14,8 +14,7 @@ baseRouter.get('/greeting', (req, res) => {
 });
 
 baseRouter.post('/add', (req, res) => {
-    {first} = req.params;
-    {second} = req.params;
+    {first,second} = req.body;
 
     result = first+second;
     res.json({ "result": result });
@@ -23,8 +22,7 @@ baseRouter.post('/add', (req, res) => {
 
 
 baseRouter.post('/subtract', (req, res) => {
-    {first} = req.params;
-    {second} = req.params;
+    {first,second} = req.body
 
     result = first-second;
     res.json({ "result": result });
